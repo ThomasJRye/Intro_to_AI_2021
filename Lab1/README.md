@@ -42,6 +42,9 @@ StudentID, Age, email, hrsStudy, FinalGrade
 
 We will be using [pandas][pandas-doc] and [numpy][numpy-doc].
 
+
+**[Solution added][Solution]**
+
 ## Tasks
 **1. In this lab, you will import the csv file into pandas:**
 
@@ -50,7 +53,7 @@ Hint:
 #If you want to use the csv from this git set
 # url = "https://raw.githubusercontent.com/umaimehm/Intro_to_AI_2021/main/Lab1/stud.csv"
 # You can also download the csv and set
-# url="{filepath]/ctud.csv"
+# url="{filepath]/stud.csv"
 df = pd.read_csv(url, sep=',')
 df.head()
 
@@ -213,4 +216,5 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [kite-outliers]: https://www.kite.com/python/answers/how-to-remove-outliers-from-a-pandas-dataframe-in-python/
 [pandas-tutorial]: https://github.com/TirendazAcademy/PANDAS-TUTORIAL
 [jupyter-tutorial]: https://www.youtube.com/watch?v=vmEHCJofslg
+[solution]: Solution.ipynb
 
