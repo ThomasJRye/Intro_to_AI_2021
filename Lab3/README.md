@@ -45,6 +45,11 @@ We will also take a look on how to work with datetime objects
 
 We will be using [pandas][pandas-doc], [laundromat][laundromat] and [faker][faker]
 
+## Solution
+[Task 1 - 2][solution-fak]
+
+[Task 3][solution-fly]
+
 
 
 ## New imports
@@ -53,14 +58,15 @@ Faker and laudromat is new packages and we need to install them. Go to your anac
 
 ```python
 pip install Faker
-
-pip install laundromat
+# Since people have problems with laundromat, we will drop this part of the task
+#pip install spacy==2.3.2
+#pip install laundromat
 ```
  After the install, you should be able to use
  ```python
 from faker import Faker
 import pandas as pd
-from laundromat.spacy.spacy_model import SpacyModel
+#from laundromat.spacy.spacy_model import SpacyModel
 from faker.providers.credit_card import Provider as CreditCardProvider #Add creditcards to faker
 ```
 
@@ -110,7 +116,7 @@ textArray = [] #Create a empty array
     cc = row[3]
     #Using f string we can now create a new string with the values, and
     #append (add) that string to the text array
-    textArray.append(f'Hi, my name is {name}. I wonder if you deliver to {adresse}. My credi card nr is {cc} and my ssn is {ssn')
+    textArray.append(f'Hi, my name is {name}. I wonder if you deliver to {adress}. My credi card nr is {cc} and my ssn is {ssn}')
 ```
 
 TIP:
@@ -131,6 +137,10 @@ for index, row in df.iterrows():
 ```
 </details>
 
+*Due to issues with spacy (a package that laundromat need to operate correctly), we removed this part of the lab. You can still see how it works in the [solution][solution-fak]*
+
+<details>
+  <summary>Removed laundromat because of run issues!</summary>
 
 We now have a array with 10 text strings. Using a for-loop we will now see if laundromat can catch all 
 Names and addresses
@@ -160,6 +170,8 @@ Try to run the above for-loop again to see if we catched credit card and ssn thi
 
 You will most likely see that we don't have a 100% success rate, since we didn't spend alot of time setting up
 the function. 
+
+</details>
 
 Feel free to play with both [Faker][faker] and [Laundromat][laundromat] on your own time.
 
@@ -346,6 +358,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [faker]: https://github.com/joke2k/faker
 [laundromat]: https://github.com/navikt/laundromat
 [frost]: https://frost.met.no/python_example.html
+[solution-fak]: faker.ipynb
+[solution-fly]: flight.ipynb
 
 
 
