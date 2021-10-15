@@ -89,6 +89,8 @@ corr.style.background_gradient(cmap='coolwarm')
 
 ![corr plot][corr]
 
+The correlation is not as clear as last lab, but let's see what the algorithm can do non the less
+  
 </details>
 
 Drop the result column from the dataset, and store it in a variable.
@@ -280,7 +282,7 @@ Well, to show you that it's easy to switch between algorithms once the data is p
 from sklearn.cluster import AgglomerativeClustering 
 newAlg = AgglomerativeClustering(linkage = 'average', n_clusters=clusters)
 newAlg.fit(coordinates)
-clust3=t.labels_
+clust3=newAlg.labels_
 
 plot_cluster(clust3)
 ```
